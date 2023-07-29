@@ -1,0 +1,6 @@
+version: '3'
+services:
+  nodejs_app:
+    image: ${DOCKER_REGISTRY}/${IMAGE_NAME}
+    ports:
+      - "3000:3000"
