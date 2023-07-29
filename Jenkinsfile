@@ -53,12 +53,12 @@ pipeline {
         }
 
         stage('Deploy Dev') {
-            echo "** In Deploy to dev stage"
             when {
                     // Add any condition to control when this stage should run (e.g., manual approval)
                     expression { params.DEPLOY_TO_DEV == 'true' }
                 }
             steps {
+                echo "** In Deploy to dev stage"
                 // Deploy the Docker image to the Dev environment
                 sh "docker pull ${DOCKER_REGISTRY}/${IMAGE_NAME}"
                 // Run the Docker container on the local machine
@@ -67,12 +67,12 @@ pipeline {
         }
 
         stage('Deploy UAT') {
-            echo "** In deploy to UAT stage"
             when {
                 // Add any condition to control when this stage should run (e.g., manual approval)
                 expression { params.DEPLOY_TO_UAT == 'true' }
             }
             steps {
+                echo "** In deploy to UAT stage"
                 // Deploy the Docker image to the Dev environment
                 sh "docker pull ${DOCKER_REGISTRY}/${IMAGE_NAME}"
                 // Run the Docker container on the local machine
@@ -81,12 +81,12 @@ pipeline {
         }
 
         stage('Deploy Production') {
-            echo "** In deploy to PROD stage"
             when {
                 // Add any condition to control when this stage should run (e.g., manual approval)
                 expression { params.DEPLOY_TO_PROD == 'true' }
             }
             steps {
+                echo "** In deploy to PROD stage"
                 // Deploy the Docker image to the Dev environment
                 sh "docker pull ${DOCKER_REGISTRY}/${IMAGE_NAME}"
                 // Run the Docker container on the local machine
