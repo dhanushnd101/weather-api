@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Changed the echo statement"
+git commit -m "Added the PATH and controles for UAT and DEV"
 git push origin main
