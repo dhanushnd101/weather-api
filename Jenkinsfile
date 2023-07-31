@@ -5,7 +5,6 @@ pipeline {
         // Change these variables according to your project
         DOCKER_REGISTRY = "dhanushnd" // Replace with your Docker Hub username
         IMAGE_NAME = "weather-api" // Replace with the name you want to give to your Docker image
-        PATH = "$PATH:/opt/homebrew/bin"
     }
   
     stages {

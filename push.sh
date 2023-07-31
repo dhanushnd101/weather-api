@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Added the PATH and controles for UAT and DEV"
+git commit -m "removed PATH"
 git push origin main
